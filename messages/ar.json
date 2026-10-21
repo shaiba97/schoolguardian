@@ -1,0 +1,147 @@
+{
+  "common": {
+    "loading": "جارٍ التحميل…",
+    "retry": "إعادة المحاولة",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "close": "إغلاق",
+    "view": "عرض",
+    "download": "تنزيل",
+    "print": "طباعة",
+    "noData": "لا يوجد شيء بعد",
+    "unavailable": "غير متوفر",
+    "all": "الكل",
+    "back": "رجوع",
+    "shown": "المعروض {count}"
+  },
+  "nav": {
+    "dashboard": "الرئيسية",
+    "results": "النتائج",
+    "timetables": "الجداول",
+    "attendance": "الحضور",
+    "notifications": "الإشعارات",
+    "cases": "الحالات",
+    "profile": "حسابي"
+  },
+  "login": {
+    "title": "تسجيل دخول ولي الأمر",
+    "guardianId": "رقم ولي الأمر",
+    "guardianIdPlaceholder": "26CPG0001",
+    "password": "كلمة المرور",
+    "school": "المدرسة",
+    "selectSchool": "اختر مدرستك…",
+    "signIn": "تسجيل الدخول",
+    "continue": "متابعة",
+    "signingIn": "جارٍ تسجيل الدخول…",
+    "required": "رقم ولي الأمر وكلمة المرور مطلوبان.",
+    "unavailable": "بوابة أولياء الأمور غير متوفرة — حاول مجددًا",
+    "noSignup": "تُنشأ الحسابات مع القبول — لا يوجد تسجيل ذاتي."
+  },
+  "header": {
+    "portalName": "بوابة ولي الأمر",
+    "myProfile": "حسابي",
+    "logout": "تسجيل الخروج",
+    "language": "اللغة",
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "children": {
+    "title": "أبنائي",
+    "selectChild": "اختر الطالب",
+    "noChildren": "لا يوجد طلاب مرتبطون",
+    "noChildrenHint": "تواصل مع الشؤون الأكاديمية لربط أبنائك بهذا الحساب.",
+    "viewing": "عرض بيانات {name}"
+  },
+  "dashboard": {
+    "title": "الرئيسية",
+    "resultsSummary": "نتائج {name}",
+    "attendanceSummary": "حضور {name}",
+    "overall": "الإجمالي",
+    "tests": "الاختبارات",
+    "exams": "الامتحانات",
+    "acrossResults": "عبر {count} من النتائج في هذه الفترة",
+    "acrossSessions": "عبر {count} من الحصص في هذه الفترة",
+    "viewResults": "عرض النتائج",
+    "viewTimetable": "عرض الجدول",
+    "viewAttendance": "عرض الحضور"
+  },
+  "results": {
+    "title": "النتائج",
+    "subtitle": "النتائج المنشورة فقط",
+    "overall": "الإجمالي عبر {count} من النتائج المنشورة",
+    "tests": "الاختبارات",
+    "exams": "الامتحانات",
+    "other": "أخرى",
+    "average": "متوسط {group}",
+    "slip": "الكشف",
+    "noResults": "لا توجد نتائج هنا",
+    "noResultsHint": "تظهر النتائج المنشورة هنا بعد إعلان الامتحانات.",
+    "allSubjects": "كل المواد",
+    "allTypes": "كل الأنواع",
+    "examAverage": "متوسط الامتحان"
+  },
+  "attendance": {
+    "title": "الحضور",
+    "present": "حاضر",
+    "absent": "غائب",
+    "late": "متأخر",
+    "excused": "بعذر",
+    "attendanceRate": "نسبة الحضور",
+    "noRecords": "لا توجد سجلات حضور بعد"
+  },
+  "timetables": {
+    "title": "الجداول",
+    "classTab": "الجدول الدراسي",
+    "examTab": "جدول الامتحانات",
+    "noEntries": "لا توجد حصص بعد",
+    "teacher": "المعلم",
+    "room": "القاعة",
+    "invigilator": "المراقب",
+    "period": "الحصة",
+    "break": "استراحة",
+    "mon": "الإثنين",
+    "tue": "الثلاثاء",
+    "wed": "الأربعاء",
+    "thu": "الخميس",
+    "sat": "السبت"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "noNotifications": "لا توجد إشعارات بعد",
+    "markRead": "تعليم كمقروء",
+    "markAllRead": "تعليم الكل كمقروء",
+    "unread": "{count} غير مقروءة"
+  },
+  "cases": {
+    "title": "الحالات",
+    "noCases": "لا توجد حالات مسجلة",
+    "filed": "قُدمت {date}",
+    "resolved": "حُلت {date}",
+    "filedBy": "قدمها {name}",
+    "resolution": "القرار"
+  },
+  "profile": {
+    "title": "حسابي",
+    "guardianInfo": "بيانات ولي الأمر",
+    "name": "الاسم",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "relationship": "صلة القرابة",
+    "perChild": "الصلة بـ{name}",
+    "logout": "تسجيل الخروج",
+    "primary": "أساسي"
+  },
+  "trends": {
+    "notEnoughHistory": "لا يوجد سجل كافٍ بعد",
+    "improving": "في تحسن",
+    "declining": "في تراجع",
+    "stable": "مستقر"
+  },
+  "windows": {
+    "week": "أسبوع",
+    "month": "شهر",
+    "3m": "٣ أشهر",
+    "6m": "٦ أشهر",
+    "1y": "سنة"
+  }
+}

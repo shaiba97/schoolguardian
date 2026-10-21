@@ -1,0 +1,148 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "save": "Save",
+    "close": "Close",
+    "view": "View",
+    "download": "Download",
+    "print": "Print",
+    "noData": "Nothing here yet",
+    "unavailable": "Unavailable",
+    "all": "All",
+    "back": "Back",
+    "shown": "{count} shown"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "results": "Results",
+    "timetables": "Timetables",
+    "attendance": "Attendance",
+    "notifications": "Notifications",
+    "cases": "Cases",
+    "profile": "Profile"
+  },
+  "login": {
+    "title": "Guardian sign in",
+    "guardianId": "Guardian ID",
+    "guardianIdPlaceholder": "26CPG0001",
+    "password": "Password",
+    "school": "School",
+    "selectSchool": "Select your school…",
+    "signIn": "Sign in",
+    "continue": "Continue",
+    "signingIn": "Signing in…",
+    "required": "Guardian ID and password are required.",
+    "unavailable": "Guardian portal is unavailable — try again",
+    "noSignup": "Accounts are provisioned alongside admissions — there is no self-signup."
+  },
+  "header": {
+    "portalName": "Guardian Portal",
+    "myProfile": "My profile",
+    "logout": "Sign out",
+    "language": "Language",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "children": {
+    "title": "My children",
+    "selectChild": "Select child",
+    "noChildren": "No linked children",
+    "noChildrenHint": "Contact academic affairs to link your children to this account.",
+    "viewing": "Viewing {name}"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "resultsSummary": "{name}'s results",
+    "attendanceSummary": "{name}'s attendance",
+    "overall": "Overall",
+    "tests": "Tests",
+    "exams": "Exams",
+    "acrossResults": "across {count} results this window",
+    "acrossSessions": "across {count} sessions this window",
+    "viewResults": "View results",
+    "viewTimetable": "View timetable",
+    "viewAttendance": "View attendance"
+  },
+  "results": {
+    "title": "Results",
+    "subtitle": "Published results only",
+    "overall": "overall across {count} published results",
+    "tests": "Tests",
+    "exams": "Exams",
+    "other": "Other",
+    "average": "{group} average",
+    "slip": "Slip",
+    "noResults": "No results here",
+    "noResultsHint": "Published results appear here once exams are released.",
+    "allSubjects": "All subjects",
+    "allTypes": "All types",
+    "examAverage": "Exam average"
+  },
+  "attendance": {
+    "title": "Attendance",
+    "present": "Present",
+    "absent": "Absent",
+    "late": "Late",
+    "excused": "Excused",
+    "attendanceRate": "Attendance rate",
+    "noRecords": "No attendance records yet"
+  },
+  "timetables": {
+    "title": "Timetables",
+    "classTab": "Class timetable",
+    "examTab": "Exam timetable",
+    "noEntries": "No timetable entries yet",
+    "teacher": "Teacher",
+    "room": "Room",
+    "invigilator": "Invigilator",
+    "period": "Period",
+    "break": "Break",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "sat": "Sat"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "noNotifications": "No notifications yet",
+    "markRead": "Mark read",
+    "markAllRead": "Mark all read",
+    "unread": "{count} unread"
+  },
+  "cases": {
+    "title": "Cases",
+    "noCases": "No cases on record",
+    "filed": "Filed {date}",
+    "resolved": "Resolved {date}",
+    "filedBy": "Filed by {name}",
+    "resolution": "Resolution"
+  },
+  "profile": {
+    "title": "My profile",
+    "guardianInfo": "Guardian information",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "relationship": "Relationship",
+    "perChild": "Relationship to {name}",
+    "language": "Language",
+    "logout": "Sign out",
+    "primary": "Primary"
+  },
+  "trends": {
+    "notEnoughHistory": "Not enough history yet",
+    "improving": "Improving",
+    "declining": "Declining",
+    "stable": "Stable"
+  },
+  "windows": {
+    "week": "Week",
+    "month": "Month",
+    "3m": "3 mo",
+    "6m": "6 mo",
+    "1y": "Year"
+  }
+}
