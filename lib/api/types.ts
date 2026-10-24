@@ -123,3 +123,53 @@ export type GuardianProfile = {
     isPrimary: boolean;
   }>;
 };
+
+// The shared finance-portal ledger (GET /parents/me/children/:childId/finance).
+// Shapes mirror backend/src/finance/finance-portal.service.ts getStudentLedger.
+export type LedgerFeeRow = { label: string; amount: number; discount: number; net: number };
+
+export type LedgerFee = {
+  templateName: string;
+  currency: string;
+  rows: LedgerFeeRow[];
+  total: number;
+  totalDiscount: number;
+  netTotal: number;
+};
+
+export type LedgerInstallment = {
+  no: number;
+  name: string;
+  dueDate?: string | null;
+  amount: number;
+  discounted: number;
+  paid: number;
+  remaining: number;
+  status: "PAID" | "OVERDUE" | "PARTIAL" | "PENDING";
+  overdue: boolean;
+};
+
+export type LedgerPayment = {
+  id: string;
+  ref: string;
+  at?: string | null;
+  target: string;
+  method: string;
+  amount: number;
+  currencyCode: string;
+  by: string;
+};
+
+export type WardFinance = {
+  profile: { id: string; name: string; roleNumber: string };
+  fee: LedgerFee;
+  installments: LedgerInstallment[];
+  payments: LedgerPayment[];
+  totals: {
+    assigned: number;
+    paid: number;
+    balance: number;
+    status: "FULLY_PAID" | "PARTIALLY_PAID" | "OVERDUE";
+    currency: string;
+  };
+};

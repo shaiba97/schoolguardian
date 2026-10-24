@@ -12,6 +12,7 @@ import {
   LayoutDashboard,
   Table2,
   UserRound,
+  BanknoteIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +21,7 @@ const ITEMS = [
   { href: "/results", labelKey: "results", icon: GraduationCap },
   { href: "/timetables", labelKey: "timetables", icon: Table2 },
   { href: "/attendance", labelKey: "attendance", icon: CalendarCheck },
+  { href: "/finance", labelKey: "finance", icon: BanknoteIcon },
   { href: "/notifications", labelKey: "notifications", icon: Bell },
   { href: "/cases", labelKey: "cases", icon: FolderOpen },
   { href: "/profile", labelKey: "profile", icon: UserRound },

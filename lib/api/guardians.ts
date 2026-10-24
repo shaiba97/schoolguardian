@@ -6,6 +6,7 @@ import type {
   TrendWindow,
   WardAttendance,
   WardCases,
+  WardFinance,
   WardResults,
   WardTimetable,
   WardTrend,
@@ -33,6 +34,10 @@ export function getWardTimetable(childId: string) {
 
 export function getWardCases(childId: string) {
   return guardianApiFetch<WardCases>(`/parents/me/children/${childId}/cases`);
+}
+
+export function getWardFinance(childId: string) {
+  return guardianApiFetch<WardFinance>(`/parents/me/children/${childId}/finance`);
 }
 
 export function getWardTrend(childId: string, metric: "results" | "attendance", window: TrendWindow) {
