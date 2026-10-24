@@ -45,7 +45,7 @@ export function LanguageToggle({ compact = false, className }: { compact?: boole
         disabled={pending}
         aria-label={t("language")}
         title={t("language")}
-        className={cn("shrink-0 text-white/70 hover:text-white hover:bg-white/10", className)}
+        className={cn("shrink-0", className)}
       >
         <Languages size={16} aria-hidden />
         {locale === "ar" ? "EN" : "عربي"}

@@ -54,7 +54,10 @@ export function MobileTopBar() {
         <p className="min-w-0 flex-1 truncate text-xs font-medium uppercase tracking-wider text-foreground">
           {tHeader("portalName")}
         </p>
-        <LanguageToggle compact className="border-transparent bg-transparent text-foreground hover:bg-white/60" />
+        <LanguageToggle
+          compact
+          className="border-transparent bg-transparent text-foreground hover:bg-white/60 hover:text-foreground"
+        />
         <Link
           href="/notifications"
           aria-label={tNav("notifications")}

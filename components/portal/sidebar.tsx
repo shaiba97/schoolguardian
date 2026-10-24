@@ -47,7 +47,10 @@ export function Sidebar() {
         <p className="min-w-0 truncate px-2 text-xs font-medium uppercase tracking-wider text-sidebar-foreground">
           {th("portalName")}
         </p>
-        <LanguageToggle className="border-transparent bg-transparent text-sidebar-foreground hover:bg-sidebar-hover" />
+        <LanguageToggle
+          compact
+          className="border-transparent bg-transparent text-sidebar-foreground hover:bg-sidebar-hover hover:text-sidebar-foreground"
+        />
       </div>
       <nav aria-label={th("portalName")} className="mt-4 flex flex-1 flex-col gap-1">
         {ITEMS.map((item) => {
