@@ -67,6 +67,12 @@
     "unavailable": "Guardian portal is unavailable — try again",
     "noSignup": "Accounts are provisioned alongside admissions — there is no self-signup."
   },
+  "tenantLocked": {
+    "title": "Access suspended",
+    "school": "School",
+    "lockedOn": "Locked on",
+    "signOut": "Sign out"
+  },
   "header": {
     "portalName": "Guardian Portal",
     "myProfile": "My profile",

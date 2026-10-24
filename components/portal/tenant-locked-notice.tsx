@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Lock } from "lucide-react";
+import { useTranslations } from "next-intl";
 import {
   currentTenantLock,
   TENANT_LOCK_EVENT,
@@ -16,6 +17,7 @@ import { Button } from "@/components/ui/button";
  * with a broken page.
  */
 export function TenantLockedNotice() {
+  const t = useTranslations("tenantLocked");
   const [notice, setNotice] = React.useState<TenantLockNotice | null>(
     currentTenantLock(),
   );
@@ -59,7 +61,7 @@ export function TenantLockedNotice() {
             <Lock size={18} aria-hidden />
           </span>
           <h2 id="tenant-locked-title" className="text-base font-semibold">
-            Access suspended
+            {t("title")}
           </h2>
         </div>
 
@@ -67,12 +69,12 @@ export function TenantLockedNotice() {
 
         <dl className="grid gap-1 border-t pt-3 text-sm">
           <div className="flex items-center justify-between gap-4">
-            <dt className="text-muted-foreground">School</dt>
+            <dt className="text-muted-foreground">{t("school")}</dt>
             <dd>{notice.schoolName}</dd>
           </div>
           {notice.lockedAt ? (
             <div className="flex items-center justify-between gap-4">
-              <dt className="text-muted-foreground">Locked on</dt>
+              <dt className="text-muted-foreground">{t("lockedOn")}</dt>
               <dd className="font-mono text-xs">
                 {new Date(notice.lockedAt).toISOString().slice(0, 10)}
               </dd>
@@ -82,7 +84,7 @@ export function TenantLockedNotice() {
 
         <div className="flex justify-end gap-2 border-t pt-3">
           <Button type="button" variant="outline" onClick={() => void signOut()}>
-            Sign out
+            {t("signOut")}
           </Button>
         </div>
       </div>

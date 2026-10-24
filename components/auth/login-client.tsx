@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { LanguageToggle } from "@/components/i18n/language-toggle";
 
 type TenantOption = { id: string; name: string };
 
@@ -82,6 +83,9 @@ export function LoginClient() {
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-md flex-col justify-center p-4">
+      <div className="mb-2 flex justify-end print:hidden">
+        <LanguageToggle />
+      </div>
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-base">

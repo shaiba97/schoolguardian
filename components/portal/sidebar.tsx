@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { LanguageToggle } from "@/components/i18n/language-toggle";
 import {
   Bell,
   CalendarCheck,
@@ -43,7 +44,7 @@ export function Sidebar() {
       <p className="px-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
         {th("portalName")}
       </p>
-      <nav aria-label="Guardian portal" className="mt-4 flex flex-1 flex-col gap-1">
+      <nav aria-label={th("portalName")} className="mt-4 flex flex-1 flex-col gap-1">
         {ITEMS.map((item) => {
           const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
           const Icon = item.icon;
@@ -65,7 +66,10 @@ export function Sidebar() {
           );
         })}
       </nav>
-      <LogoutButton />
+      <div className="flex flex-col gap-1">
+        <LanguageToggle />
+        <LogoutButton />
+      </div>
     </aside>
   );
 }
