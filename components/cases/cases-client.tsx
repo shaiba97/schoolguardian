@@ -123,7 +123,9 @@ export function CasesClient() {
             <Card key={item.id}>
               <CardHeader>
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <CardTitle className="text-sm">{item.title}</CardTitle>
+          <CardTitle className="text-sm flex items-center gap-2">
+            <FolderOpen size={16} className="rounded-lg bg-[#E0E7FF] p-1 text-[#312E81]" aria-hidden /> {item.title}
+          </CardTitle>
                   <Badge variant="outline">{item.status}</Badge>
                 </div>
                 <p className="mt-1 text-xs text-muted-foreground">

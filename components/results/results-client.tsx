@@ -223,7 +223,7 @@ export function ResultsClient() {
 
       <Card>
         <CardContent className="flex flex-wrap items-center gap-3 p-4">
-          <GraduationCap size={20} className="text-muted-foreground" aria-hidden />
+          <GraduationCap size={20} className="rounded-lg bg-[#E0E7FF] p-1 text-[#312E81]" aria-hidden />
           <p className="text-2xl font-semibold">
             {data.averagePercentage === null || data.averagePercentage === undefined
               ? "—"
@@ -278,7 +278,7 @@ export function ResultsClient() {
           id="results-exam-type"
           value={examType}
           onChange={(event) => setExamType(event.target.value)}
-          className="flex h-9 rounded-lg border border-input bg-background px-2 py-1 text-sm shadow-sm"
+          className="flex h-9 rounded-lg border border-input bg-card px-2 py-1 text-sm shadow-sm"
         >
           <option value="all">{t("allTypes")}</option>
           {examTypes.map((type) => (

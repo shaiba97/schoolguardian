@@ -12,7 +12,8 @@
     "unavailable": "Unavailable",
     "all": "All",
     "back": "Back",
-    "shown": "{count} shown"
+    "shown": "{count} shown",
+    "search": "Search…"
   },
   "nav": {
     "dashboard": "Dashboard",

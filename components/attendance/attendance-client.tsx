@@ -21,10 +21,11 @@ function errorMessage(cause: unknown, fallback: string): string {
   return cause instanceof ApiError ? cause.message : fallback;
 }
 
-function statusVariant(status: string): "default" | "destructive" | "outline" {
-  if (status === "PRESENT") return "default";
+function statusVariant(status: string): "success" | "destructive" | "warning" | "info" {
+  if (status === "PRESENT") return "success";
   if (status === "ABSENT") return "destructive";
-  return "outline";
+  if (status === "LATE") return "warning";
+  return "info";
 }
 
 function StatusBadge({ status }: { status: string }) {
@@ -173,7 +174,7 @@ export function AttendanceClient() {
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <CardTitle className="flex items-center gap-2 text-sm">
-              <CalendarCheck size={16} className="text-muted-foreground" aria-hidden />
+              <CalendarCheck size={16} className="rounded-lg bg-[#D1FAE5] p-1 text-[#065F46]" aria-hidden />
               {t("attendanceRate")}
             </CardTitle>
             <div className="flex flex-wrap gap-1.5" role="group" aria-label="Trend window">

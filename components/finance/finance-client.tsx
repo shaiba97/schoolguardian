@@ -37,11 +37,11 @@ const INSTALLMENT_STATUS_KEY: Record<LedgerInstallment["status"], string> = {
   PENDING: "instPending",
 };
 
-const INSTALLMENT_BADGE_VARIANT: Record<LedgerInstallment["status"], "default" | "secondary" | "destructive" | "outline"> = {
-  PAID: "default",
-  PARTIAL: "secondary",
+const INSTALLMENT_BADGE_VARIANT: Record<LedgerInstallment["status"], "success" | "warning" | "info" | "destructive"> = {
+  PAID: "success",
+  PARTIAL: "warning",
   OVERDUE: "destructive",
-  PENDING: "outline",
+  PENDING: "info",
 };
 
 // Backend payment_method enum — displayed as-is, localized.
@@ -155,7 +155,7 @@ export function FinanceClient() {
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-2">
             <CardTitle className="text-sm">{t("summary")}</CardTitle>
-            <Badge variant={data.totals.status === "OVERDUE" ? "destructive" : data.totals.status === "FULLY_PAID" ? "default" : "secondary"}>
+            <Badge variant={data.totals.status === "OVERDUE" ? "destructive" : data.totals.status === "FULLY_PAID" ? "success" : "warning"}>
               {t(TOTAL_STATUS_KEY[data.totals.status])}
             </Badge>
           </div>
@@ -234,8 +234,8 @@ export function FinanceClient() {
       <Card className="break-inside-avoid">
         <CardHeader>
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <CardTitle className="text-sm flex items-center gap-2">
-              <BanknoteIcon size={16} aria-hidden /> {t("payments")}
+              <CardTitle className="text-sm flex items-center gap-2">
+                <BanknoteIcon size={16} className="rounded-lg bg-[#E0E7FF] p-1 text-[#312E81]" aria-hidden /> {t("payments")}
             </CardTitle>
             <Button type="button" variant="ghost" size="sm" onClick={() => window.print()} className="print:hidden">
               <Printer size={14} aria-hidden /> {tCommon("print")}

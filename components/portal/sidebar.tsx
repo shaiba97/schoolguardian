@@ -40,12 +40,14 @@ export function Sidebar() {
   const studentId = searchParams.get("studentId") ?? "";
 
   return (
-    <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-e bg-background p-4 md:flex print:hidden">
+    <aside
+      className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-e border-sidebar-border bg-sidebar text-sidebar-foreground p-4 md:flex print:hidden"
+    >
       <div className="flex items-center justify-between gap-2">
-        <p className="min-w-0 truncate px-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+        <p className="min-w-0 truncate px-2 text-xs font-medium uppercase tracking-wider text-sidebar-foreground">
           {th("portalName")}
         </p>
-        <LanguageToggle />
+        <LanguageToggle className="border-transparent bg-transparent text-sidebar-foreground hover:bg-sidebar-hover" />
       </div>
       <nav aria-label={th("portalName")} className="mt-4 flex flex-1 flex-col gap-1">
         {ITEMS.map((item) => {
@@ -59,11 +61,14 @@ export function Sidebar() {
               className={cn(
                 "flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 active
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                  ? "bg-sidebar-active text-sidebar-active-foreground"
+                  : "text-sidebar-foreground hover:bg-sidebar-hover hover:text-sidebar-foreground",
               )}
             >
-              <Icon size={18} aria-hidden />
+              {active ? (
+                <span className="w-1 shrink-0 rounded-r bg-emerald-200" aria-hidden />
+              ) : null}
+              <Icon size={18} className={active ? undefined : "text-indigo-200"} aria-hidden />
               {t(item.labelKey)}
             </Link>
           );
@@ -97,7 +102,7 @@ export function LogoutButton({ className }: { className?: string }) {
       onClick={() => void logout()}
       disabled={pending}
       className={cn(
-        "flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:opacity-50",
+        "flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-hover hover:text-sidebar-foreground disabled:opacity-50",
         className,
       )}
     >

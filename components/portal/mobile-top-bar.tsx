@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Bell, FolderOpen, UserRound } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { LanguageToggle } from "@/components/i18n/language-toggle";
 import { listGuardianNotifications } from "@/lib/api/guardians";
@@ -50,29 +49,20 @@ export function MobileTopBar() {
   const profileActive = pathname === "/profile" || pathname.startsWith("/profile/");
 
   return (
-    <div className="fixed inset-x-0 top-0 z-40 border-b border-white/15 bg-primary print:hidden md:hidden dark:bg-neutral-900">
+    <div className="fixed inset-x-0 top-0 z-40 border-b border-[#C7D2FE] bg-[#E0E7FF] text-foreground print:hidden md:hidden">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between gap-1.5 px-3">
-        <p className="min-w-0 flex-1 truncate text-xs font-medium uppercase tracking-wider text-white/80">
+        <p className="min-w-0 flex-1 truncate text-xs font-medium uppercase tracking-wider text-foreground">
           {tHeader("portalName")}
         </p>
-        <LanguageToggle compact />
+        <LanguageToggle compact className="border-transparent bg-transparent text-foreground hover:bg-white/60" />
         <Link
           href="/notifications"
           aria-label={tNav("notifications")}
-          className={cn(
-            "relative inline-flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/10",
-            "text-white/70 hover:text-white",
-          )}
+          className="relative inline-flex size-9 shrink-0 items-center justify-center rounded-lg text-[#4338CA] hover:bg-white/60 hover:text-[#4338CA]"
         >
           <Bell size={20} aria-hidden />
           {showBadge && (
-            <Badge
-              variant="destructive"
-              aria-hidden="true"
-              className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-[10px]"
-            >
-              {unread > 99 ? "99+" : unread}
-            </Badge>
+            <span className="absolute -right-0.5 -top-0.5 size-5 rounded-full bg-[#FB923C]" aria-hidden />
           )}
         </Link>
         <Link
@@ -80,8 +70,8 @@ export function MobileTopBar() {
           aria-current={casesActive ? "page" : undefined}
           aria-label={tNav("cases")}
           className={cn(
-            "inline-flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/10",
-            casesActive ? "text-white" : "text-white/70 hover:text-white",
+            "inline-flex size-9 shrink-0 items-center justify-center rounded-lg text-[#4338CA] hover:bg-white/60",
+            casesActive ? "font-semibold" : "",
           )}
         >
           <FolderOpen size={20} aria-hidden />
@@ -91,8 +81,8 @@ export function MobileTopBar() {
           aria-current={profileActive ? "page" : undefined}
           aria-label={tNav("profile")}
           className={cn(
-            "inline-flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-white/10",
-            profileActive ? "text-white" : "text-white/70 hover:text-white",
+            "inline-flex size-9 shrink-0 items-center justify-center rounded-lg text-[#4338CA] hover:bg-white/60",
+            profileActive ? "font-semibold" : "",
           )}
         >
           <UserRound size={20} aria-hidden />

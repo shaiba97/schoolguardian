@@ -12,7 +12,8 @@
     "unavailable": "غير متوفر",
     "all": "الكل",
     "back": "رجوع",
-    "shown": "المعروض {count}"
+    "shown": "المعروض {count}",
+    "search": "ابحث…"
   },
   "nav": {
     "dashboard": "الرئيسية",

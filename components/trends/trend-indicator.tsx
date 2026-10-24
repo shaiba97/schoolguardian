@@ -19,8 +19,8 @@ const VERDICT_META: Record<
 
 // Base-nova badge set has no success/muted/info variants: improving takes
 // the primary default, declining destructive, stable outline.
-function verdictVariant(verdict: TrendVerdict): "default" | "destructive" | "outline" {
-  if (verdict === "improving") return "default";
+function verdictVariant(verdict: TrendVerdict): "success" | "destructive" | "outline" {
+  if (verdict === "improving") return "success";
   if (verdict === "declining") return "destructive";
   return "outline";
 }

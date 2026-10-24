@@ -185,7 +185,7 @@ export function TimetablesClient() {
                       }
                       if (entry.isBreak) {
                         return (
-                          <TableCell key={slot} className="bg-muted/60 text-center">
+                          <TableCell key={slot} className="bg-[#E0E7FF]/80 text-center">
                             <p className="text-xs font-medium">{t("break")}</p>
                             <p className="text-[11px] tabular-nums text-muted-foreground">
                               {formatTime(entry.startTime)} – {formatTime(entry.endTime)}

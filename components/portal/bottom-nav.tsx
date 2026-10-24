@@ -30,7 +30,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Guardian portal"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-white/15 bg-primary print:hidden md:hidden dark:bg-neutral-900"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#312E81] print:hidden md:hidden"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <div className="mx-auto grid w-full max-w-6xl grid-cols-4 px-1 pt-1">
@@ -47,7 +47,7 @@ export function BottomNav() {
               aria-current={active ? "page" : undefined}
               className={cn(
                 "flex min-w-0 flex-col items-center gap-0.5 rounded-lg px-1 py-2 text-[10px] font-medium transition-colors",
-                active ? "text-white" : "text-white/70 hover:text-white",
+                active ? "text-white border-b-2 border-indigo-300" : "text-[#C7D2FE] hover:text-white",
               )}
             >
               <Icon size={20} aria-hidden />

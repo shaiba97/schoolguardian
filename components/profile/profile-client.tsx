@@ -101,7 +101,7 @@ export function ProfileClient() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-sm">
-            <UserRound size={16} className="text-muted-foreground" aria-hidden />
+            <UserRound size={16} className="rounded-lg bg-[#E0E7FF] p-1 text-[#312E81]" aria-hidden />
             {t("guardianInfo")}
           </CardTitle>
         </CardHeader>

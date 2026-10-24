@@ -170,7 +170,7 @@ export function DashboardClient() {
             value={selectedId}
             onChange={(event) => select(event.target.value)}
             aria-label={tChildren("selectChild")}
-            className="h-10 min-w-0 max-w-xs truncate rounded-lg border border-input bg-background px-3 py-1 text-sm font-medium shadow-sm"
+            className="h-10 min-w-0 max-w-xs truncate rounded-lg border border-input bg-card px-3 py-1 text-sm font-medium shadow-sm"
           >
             {children.map((child) => (
               <option key={child.id} value={child.id}>
@@ -197,7 +197,7 @@ export function DashboardClient() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-sm">
-              <GraduationCap size={16} className="text-muted-foreground" aria-hidden />
+              <GraduationCap size={16} className="rounded-lg bg-[#E0E7FF] p-1 text-[#312E81]" aria-hidden />
               {t("resultsSummary", { name: childName })}
             </CardTitle>
           </CardHeader>
@@ -221,7 +221,7 @@ export function DashboardClient() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-sm">
-              <CalendarCheck size={16} className="text-muted-foreground" aria-hidden />
+              <CalendarCheck size={16} className="rounded-lg bg-[#D1FAE5] p-1 text-[#065F46]" aria-hidden />
               {t("attendanceSummary", { name: childName })}
             </CardTitle>
           </CardHeader>
@@ -318,7 +318,7 @@ export function DashboardClient() {
             </Link>
             <Link
               href={withChild("/timetables", selectedId)}
-              className={buttonVariants({ variant: "outline", size: "sm" })}
+              className={buttonVariants({ variant: "outline", size: "sm" }) + " h-auto p-0 bg-[#FB923C]/10 text-[#C2410C] hover:bg-[#FB923C]/20"}
             >
               {t("viewTimetable")}
             </Link>

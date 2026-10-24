@@ -34,7 +34,7 @@ export function ChildSwitcher({
         value={selectedId}
         onChange={(event) => onSelect(event.target.value)}
         aria-label={t("selectChild")}
-        className="h-9 min-w-0 max-w-44 truncate rounded-lg border border-input bg-background px-2 py-1 text-sm font-medium shadow-sm"
+        className="h-9 min-w-0 max-w-44 truncate rounded-lg border border-input bg-card px-2 py-1 text-sm font-medium shadow-sm"
       >
         {wards.map((child) => (
           <option key={child.id} value={child.id}>

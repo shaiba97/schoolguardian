@@ -6,6 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LOCALE_COOKIE, type PortalLocale } from "@/lib/i18n/config";
+import { cn } from "@/lib/utils";
 
 function setLocaleCookie(locale: PortalLocale) {
   const secure = window.location.protocol === "https:" ? "; Secure" : "";
@@ -17,7 +18,7 @@ function setLocaleCookie(locale: PortalLocale) {
  * server components (including <html lang/dir>) re-render without a full
  * page reload.
  */
-export function LanguageToggle({ compact = false }: { compact?: boolean }) {
+export function LanguageToggle({ compact = false, className }: { compact?: boolean; className?: string }) {
   const router = useRouter();
   const locale = useLocale() as PortalLocale;
   const t = useTranslations("header");
@@ -44,7 +45,7 @@ export function LanguageToggle({ compact = false }: { compact?: boolean }) {
         disabled={pending}
         aria-label={t("language")}
         title={t("language")}
-        className="shrink-0 text-white/70 hover:text-white hover:bg-white/10"
+        className={cn("shrink-0 text-white/70 hover:text-white hover:bg-white/10", className)}
       >
         <Languages size={16} aria-hidden />
         {locale === "ar" ? "EN" : "عربي"}
@@ -53,7 +54,16 @@ export function LanguageToggle({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <Button type="button" variant="outline" size="sm" onClick={toggle} disabled={pending}>
+    <Button
+      type="button"
+      variant="outline"
+      size="sm"
+      onClick={toggle}
+      disabled={pending}
+      aria-label={t("language")}
+      title={t("language")}
+      className={cn(className)}
+    >
       <Languages size={14} aria-hidden />
       {label}
     </Button>
