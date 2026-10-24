@@ -41,9 +41,12 @@ export function Sidebar() {
 
   return (
     <aside className="sticky top-0 hidden h-screen w-60 shrink-0 flex-col border-e bg-background p-4 md:flex print:hidden">
-      <p className="px-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-        {th("portalName")}
-      </p>
+      <div className="flex items-center justify-between gap-2">
+        <p className="min-w-0 truncate px-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+          {th("portalName")}
+        </p>
+        <LanguageToggle />
+      </div>
       <nav aria-label={th("portalName")} className="mt-4 flex flex-1 flex-col gap-1">
         {ITEMS.map((item) => {
           const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -66,10 +69,7 @@ export function Sidebar() {
           );
         })}
       </nav>
-      <div className="flex flex-col gap-1">
-        <LanguageToggle />
-        <LogoutButton />
-      </div>
+      <LogoutButton />
     </aside>
   );
 }
