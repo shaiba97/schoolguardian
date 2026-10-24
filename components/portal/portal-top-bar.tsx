@@ -17,6 +17,7 @@ import { listGuardianNotifications } from "@/lib/api/guardians";
 export function PortalTopBar() {
   const pathname = usePathname();
   const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const [unread, setUnread] = React.useState(0);
   const [loaded, setLoaded] = React.useState(false);
 
@@ -51,7 +52,7 @@ export function PortalTopBar() {
           <Search size={16} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-[#4338CA]" aria-hidden />
           <Input
             type="search"
-            placeholder={t("common.search")}
+            placeholder={tCommon("search")}
             className="pl-8 pr-3 text-sm border border-input bg-card text-foreground focus-visible:border-primary focus-visible:ring-primary/20 shrink-0"
           />
         </div>
